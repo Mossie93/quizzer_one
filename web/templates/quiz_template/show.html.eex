@@ -1,0 +1,13 @@
+<h2>Show quiz template</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @quiz_template.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: quiz_template_path(@conn, :edit, @quiz_template) %>
+<%= link "Back", to: quiz_template_path(@conn, :index) %>

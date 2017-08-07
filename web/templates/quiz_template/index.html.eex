@@ -1,0 +1,26 @@
+<h2>Listing quiz templates</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for quiz_template <- @quiz_templates do %>
+    <tr>
+      <td><%= quiz_template.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: quiz_template_path(@conn, :show, quiz_template), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: quiz_template_path(@conn, :edit, quiz_template), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: quiz_template_path(@conn, :delete, quiz_template), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New quiz template", to: quiz_template_path(@conn, :new) %>
