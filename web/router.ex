@@ -1,5 +1,6 @@
 defmodule QuizzerOne.Router do
   use QuizzerOne.Web, :router
+  use Coherence.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
