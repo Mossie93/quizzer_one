@@ -18,9 +18,9 @@ defmodule QuizzerOne.Image do
   end
 
   # Override the persisted filenames:
-  # def filename(version, _) do
-  #   version
-  # end
+  def filename(version, _) do
+    version
+  end
 
   # Override the storage directory:
   # def storage_dir(version, {file, scope}) do
