@@ -3,6 +3,7 @@ defmodule QuizzerOne.QuizTemplate do
 
   schema "quiz_templates" do
     field :name, :string
+    field :image, QuizzerOne.Image.Type
 
     timestamps()
   end
@@ -12,7 +13,7 @@ defmodule QuizzerOne.QuizTemplate do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name])
-    |> validate_required([:name])
+    |> cast(params, [:name, :image])
+    |> validate_required([:name, :image])
   end
 end
