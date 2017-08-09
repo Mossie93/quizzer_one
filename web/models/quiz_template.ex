@@ -1,5 +1,6 @@
 defmodule QuizzerOne.QuizTemplate do
   use QuizzerOne.Web, :model
+  use Arc.Ecto.Schema
 
   schema "quiz_templates" do
     field :name, :string
@@ -14,7 +15,17 @@ defmodule QuizzerOne.QuizTemplate do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :image])
+    |> cast(params, [:name])
+    |> check_uuid
+    |> cast_attachments(params, [:image])
     |> validate_required([:name, :image])
+  end
+
+  defp check_uuid(changeset) do
+    if get_field(changeset, :uuid) == nil do
+      force_change(changeset, :uuid, UUID.uuid1)
+    else
+      changeset
+    end
   end
 end
