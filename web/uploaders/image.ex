@@ -23,9 +23,9 @@ defmodule QuizzerOne.Image do
   end
 
   # Override the storage directory:
-  # def storage_dir(version, {file, scope}) do
-  #   "uploads/user/images/#{scope.id}"
-  # end
+  def storage_dir(_version, {_file, scope}) do
+    "uploads/quiz_templates/images/#{scope.uuid}"
+  end
 
   # Provide a default URL if there hasn't been a file uploaded
   # def default_url(version, scope) do
