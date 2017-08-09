@@ -4,8 +4,6 @@ defmodule QuizzerOne.Image do
   # Include ecto support (requires package arc_ecto installed):
   use Arc.Ecto.Definition
 
-  @versions [:original]
-
   # To add a thumbnail version:
   @versions [:original, :thumb]
 
