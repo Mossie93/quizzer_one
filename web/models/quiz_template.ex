@@ -4,6 +4,7 @@ defmodule QuizzerOne.QuizTemplate do
   schema "quiz_templates" do
     field :name, :string
     field :image, QuizzerOne.Image.Type
+    field :uuid, :string
 
     timestamps()
   end
