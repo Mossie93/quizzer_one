@@ -19,7 +19,7 @@ defmodule QuizzerOne.Mixfile do
   def application do
     [mod: {QuizzerOne, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :coherence]]
+                    :phoenix_ecto, :postgrex, :coherence, :ex_aws, :hackney, :poison]]
   end
 
   # Specifies which paths to compile per environment.
