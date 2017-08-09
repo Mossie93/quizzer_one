@@ -39,7 +39,8 @@ defmodule QuizzerOne.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:coherence, "~> 0.4"},
-     {:arc, "~> 0.8.0"}]
+     {:arc, "~> 0.8.0"},
+     {:arc_ecto, "~> 0.7.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
