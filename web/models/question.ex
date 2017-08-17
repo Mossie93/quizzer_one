@@ -1,9 +1,12 @@
 defmodule QuizzerOne.Question do
   use QuizzerOne.Web, :model
+  use Arc.Ecto.Schema
 
   schema "questions" do
     field :question_text, :string
     field :image, QuizzerOne.Image.Type
+
+    belongs_to :quiz_template, QuizzerOne.QuizTemplate
 
     timestamps()
   end
