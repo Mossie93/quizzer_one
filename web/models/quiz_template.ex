@@ -7,6 +7,8 @@ defmodule QuizzerOne.QuizTemplate do
     field :image, QuizzerOne.Image.Type
     field :uuid, :string
 
+    has_many :questions, QuizzerOne.Question
+
     timestamps()
   end
 
