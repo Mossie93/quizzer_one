@@ -41,3 +41,6 @@ config :quizzer_one, QuizzerOne.Repo,
   database: "quizzer_one_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :arc,
+  storage: Arc.Storage.Local
