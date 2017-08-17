@@ -4,8 +4,6 @@ defmodule QuizzerOne.Image do
   # Include ecto support (requires package arc_ecto installed):
   use Arc.Ecto.Definition
 
-  @versions [:original]
-
   # To add a thumbnail version:
   @versions [:original, :thumb]
 
@@ -20,14 +18,14 @@ defmodule QuizzerOne.Image do
   end
 
   # Override the persisted filenames:
-  # def filename(version, _) do
-  #   version
-  # end
+  def filename(version, _) do
+    version
+  end
 
   # Override the storage directory:
-  # def storage_dir(version, {file, scope}) do
-  #   "uploads/user/images/#{scope.id}"
-  # end
+  def storage_dir(_version, {_file, scope}) do
+    "uploads/quiz_templates/images/#{scope.uuid}"
+  end
 
   # Provide a default URL if there hasn't been a file uploaded
   # def default_url(version, scope) do

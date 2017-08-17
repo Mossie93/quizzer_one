@@ -44,3 +44,6 @@ config :quizzer_one, QuizzerOne.Repo,
 
 config :arc,
   storage: Arc.Storage.Local
+
+# Finally import the config/prod.secret.exs
+# which should be versioned separately.

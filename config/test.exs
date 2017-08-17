@@ -17,3 +17,6 @@ config :quizzer_one, QuizzerOne.Repo,
   database: "quizzer_one_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :arc,
+  storage: Arc.Storage.Local
