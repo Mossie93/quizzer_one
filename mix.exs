@@ -19,7 +19,7 @@ defmodule QuizzerOne.Mixfile do
   def application do
     [mod: {QuizzerOne, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :coherence]]
+                    :phoenix_ecto, :postgrex, :coherence, :ex_aws, :hackney, :poison]]
   end
 
   # Specifies which paths to compile per environment.
@@ -40,7 +40,11 @@ defmodule QuizzerOne.Mixfile do
      {:cowboy, "~> 1.0"},
      {:coherence, "~> 0.4"},
      {:arc, "~> 0.8.0"},
-     {:arc_ecto, "~> 0.7.0"}]
+     {:arc_ecto, "~> 0.7.0"},
+     {:ex_aws, "~> 1.0"},
+     {:hackney, "~> 1.6", override: true},
+     {:poison, "~> 2.0"},
+     {:sweet_xml, "~> 0.6"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
