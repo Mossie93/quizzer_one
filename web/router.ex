@@ -46,6 +46,7 @@ defmodule QuizzerOne.Router do
     pipe_through :protected
     resources "/quiz_templates", QuizTemplateController
     resources "/questions", QuestionController
+    resources "/answers", AnswerController
   end
 
   # Other scopes may use custom stacks.
