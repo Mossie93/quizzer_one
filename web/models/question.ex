@@ -7,6 +7,7 @@ defmodule QuizzerOne.Question do
     field :image, QuizzerOne.Image.Type
 
     belongs_to :quiz_template, QuizzerOne.QuizTemplate
+    has_many :answers, QuizzerOne.Answer
 
     timestamps()
   end
