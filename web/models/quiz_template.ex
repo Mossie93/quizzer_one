@@ -16,9 +16,9 @@ defmodule QuizzerOne.QuizTemplate do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:name])
+    |> validate_required([:name, :image])
     |> check_uuid
     |> cast_attachments(params, [:image])
-    |> validate_required([:name, :image])
   end
 
   defp check_uuid(changeset) do
