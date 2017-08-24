@@ -5,6 +5,7 @@ defmodule QuizzerOne.Question do
   schema "questions" do
     field :question_text, :string
     field :image, QuizzerOne.Image.Type
+    field :uuid, :string
 
     belongs_to :quiz_template, QuizzerOne.QuizTemplate
     has_many :answers, QuizzerOne.Answer
