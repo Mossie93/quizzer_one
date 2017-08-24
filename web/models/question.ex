@@ -18,7 +18,7 @@ defmodule QuizzerOne.Question do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:question_text, :image])
+    |> cast(params, [:question_text])
     |> validate_required([:question_text])
     |> check_uuid
     |> cast_attachments(params, [:image])
